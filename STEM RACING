@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloce Dynamics | High-Speed STEM Racing USB Keychains</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            orange: '#FF5500',
+                            neon: '#00F0FF',
+                            purple: '#7000FF',
+                            dark: '#0B0F17',
+                            card: '#151B26',
+                            border: '#2A3447'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Orbitron', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@600;800;900&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0B0F17;
+            color: #E2E8F0;
+        }
+        .font-display {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .neon-glow-orange {
+            box-shadow: 0 0 25px rgba(255, 85, 0, 0.4);
+        }
+        .neon-glow-cyan {
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.4);
+        }
+        .neon-text-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #00F0FF 0%, #FF5500 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(21, 27, 38, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0F17;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2A3447;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #FF5500;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col overflow-x-hidden selection:bg-brand-orange selection:text-white">
+
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 glass-panel border-b border-brand-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-orange via-brand-purple to-brand-neon p-0.5 transition-transform duration-300 group-hover:scale-105">
+                    <div class="w-full h-full bg-brand-dark rounded-[10px] flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-brand-neon text-xl group-hover:text-brand-orange transition-colors"></i>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display text-xl font-extrabold tracking-wider text-white flex items-center">
+                        VELOCE<span class="text-brand-orange ml-1">DYNAMICS</span>
+                    </span>
+                    <span class="text-[10px] text-gray-400 tracking-widest uppercase -mt-1">STEM Racing Gear</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#product" class="hover:text-brand-neon transition-colors">Keychains</a>
+                <a href="#features" class="hover:text-brand-neon transition-colors">Engineering</a>
+                <a href="#stem" class="hover:text-brand-neon transition-colors">STEM Project</a>
+                <a href="#specs" class="hover:text-brand-neon transition-colors">Tech Specs</a>
+                <a href="#reviews" class="hover:text-brand-neon transition-colors">Reviews</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <button id="open-cart-btn" class="relative p-2.5 rounded-xl bg-brand-card hover:bg-gray-800 border border-brand-border transition-all flex items-center justify-center">
+                    <i class="fa-solid fa-cart-shopping text-gray-300"></i>
+                    <span id="cart-badge" class="absolute -top-1.5 -right-1.5 bg-brand-orange text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center opacity-0 transition-opacity">0</span>
+                </button>
+                <a href="#product" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-semibold text-sm bg-gradient-to-r from-brand-orange to-red-600 hover:from-orange-600 hover:to-red-700 text-white shadow-lg shadow-orange-950/40 transition-all hover:scale-105">
+                    Order Now
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- Hero Section -->
+        <section class="relative py-16 md:py-24 overflow-hidden">
+            <!-- Background Glow Effects -->
+            <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-purple/20 blur-[140px] rounded-full -z-10 pointer-events-none"></div>
+            <div class="absolute top-1/3 left-1/4 w-[350px] h-[350px] bg-brand-neon/15 blur-[100px] rounded-full -z-10 pointer-events-none"></div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    
+                    <!-- Left: Hero Content -->
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-neon/10 border border-brand-neon/30 text-brand-neon text-xs font-semibold uppercase tracking-wider">
+                            <i class="fa-solid fa-trophy"></i> Official STEM Racing Edition
+                        </div>
+                        
+                        <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight">
+                            AERODYNAMIC DATA. <br/>
+                            <span class="gradient-text">POCKET PERFORMANCE.</span>
+                        </h1>
+                        
+                        <p class="text-gray-400 text-base sm:text-lg max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                            Engineered for high-speed file transfers and built like a miniaturized Formula STEM chassis. Crafted from anodized zinc alloy, this 2-in-1 USB 3.2 flash drive double-functions as a heavy-duty key chain.
+                        </p>
+
+                        <!-- Key Benefits Pills -->
+                        <div class="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+                            <div class="flex items-center space-x-2 bg-brand-card/80 px-4 py-2 rounded-lg border border-brand-border">
+                                <i class="fa-solid fa-gauge-high text-brand-neon"></i>
+                                <span class="text-xs font-medium text-gray-300">Up to 400MB/s Read</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-brand-card/80 px-4 py-2 rounded-lg border border-brand-border">
+                                <i class="fa-solid fa-key text-brand-orange"></i>
+                                <span class="text-xs font-medium text-gray-300">Reinforced Key Ring</span>
+                            </div>
+                            <div class="flex items-center space-x-2 bg-brand-card/80 px-4 py-2 rounded-lg border border-brand-border">
+                                <i class="fa-solid fa-shield-halved text-emerald-400"></i>
+                                <span class="text-xs font-medium text-gray-300">Shock & Water Resistant</span>
+                            </div>
+                        </div>
+
+                        <!-- Hero CTA buttons -->
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+                            <a href="#product" class="px-8 py-4 rounded-xl font-bold text-white bg-gradient-to-r from-brand-orange to-red-600 hover:from-orange-600 hover:to-red-700 shadow-xl shadow-orange-950/50 flex items-center justify-center space-x-3 transition-all transform hover:-translate-y-0.5">
+                                <span>Customize & Order</span>
+                                <i class="fa-solid fa-arrow-right text-sm"></i>
+                            </a>
+                            <a href="#features" class="px-8 py-4 rounded-xl font-semibold text-gray-300 bg-brand-card hover:bg-gray-800 border border-brand-border flex items-center justify-center space-x-2 transition-all">
+                                <i class="fa-solid fa-circle-play text-brand-neon"></i>
+                                <span>Explore Specs</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Hero Interactive Visual/Image -->
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md aspect-square bg-gradient-to-b from-brand-card to-brand-dark rounded-3xl p-6 border border-brand-border/60 shadow-2xl flex flex-col justify-between overflow-hidden group">
+                            <!-- Floating Tag -->
+                            <div class="flex justify-between items-center z-10">
+                                <span class="bg-brand-orange/20 border border-brand-orange/50 text-brand-orange text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                    STEM Edition
+                                </span>
+                                <span class="text-xs text-gray-400 font-mono">MODEL: VEL-F1-USB</span>
+                            </div>
+
+                            <!-- Car Keychain Dynamic Graphic / SVG Placeholder -->
+                            <div class="relative my-auto flex items-center justify-center py-8">
+                                <div class="absolute inset-0 bg-gradient-to-tr from-brand-neon/20 to-brand-orange/20 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+                                
+                                <!-- Realistic Formula Car USB SVG Illustration -->
+                                <svg id="hero-car-svg" viewBox="0 0 400 200" class="w-full h-auto drop-shadow-[0_15px_15px_rgba(0,0,0,0.7)] transition-transform duration-500 group-hover:scale-105">
+                                    <defs>
+                                        <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" stop-color="#FF5500" id="svg-grad-1"/>
+                                            <stop offset="100%" stop-color="#CC2200" id="svg-grad-2"/>
+                                        </linearGradient>
+                                        <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                                            <stop offset="0%" stop-color="#94A3B8"/>
+                                            <stop offset="50%" stop-color="#475569"/>
+                                            <stop offset="100%" stop-color="#1E293B"/>
+                                        </linearGradient>
+                                    </defs>
+
+                                    <!-- Keychain Ring & Chain -->
+                                    <path d="M 40 100 C 40 75, 65 75, 65 100 C 65 125, 40 125, 40 100" fill="none" stroke="url(#metalGrad)" stroke-width="8"/>
+                                    <rect x="62" y="93" width="20" height="14" rx="4" fill="url(#metalGrad)"/>
+
+                                    <!-- USB Plug extension (Front/Rear connector) -->
+                                    <rect x="310" y="88" width="45" height="24" rx="2" fill="#E2E8F0" stroke="#94A3B8" stroke-width="2"/>
+                                    <rect x="325" y="94" width="8" height="12" fill="#000" opacity="0.6"/>
+                                    <rect x="340" y="94" width="8" height="12" fill="#000" opacity="0.6"/>
+
+                                    <!-- Formula Car Chassis Body -->
+                                    <path d="M 80 100 C 100 70, 160 65, 230 75 C 270 70, 310 85, 320 100 C 310 115, 270 130, 230 125 C 160 135, 100 130, 80 100 Z" fill="url(#bodyGrad)"/>
+                                    
+                                    <!-- Cockpit / USB Housing accent -->
+                                    <ellipse cx="200" cy="100" rx="35" ry="18" fill="#0F172A" stroke="#00F0FF" stroke-width="2"/>
+                                    <path d="M 185 95 L 215 95 L 208 105 L 178 105 Z" fill="#00F0FF" opacity="0.8"/>
+
+                                    <!-- Front Wing -->
+                                    <path d="M 300 75 L 325 70 L 325 130 L 300 125 Z" fill="#1E293B" stroke="#475569" stroke-width="2"/>
+                                    
+                                    <!-- Rear Wing (Key Ring Attachment area) -->
+                                    <path d="M 80 70 L 110 70 L 100 130 L 70 130 Z" fill="#1E293B"/>
+                                    
+                                    <!-- Wheels (Stylized STEM Racing elements) -->
+                                    <circle cx="130" cy="65" r="16" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+                                    <circle cx="260" cy="65" r="16" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+                                    <circle cx="130" cy="135" r="16" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+                                    <circle cx="260" cy="135" r="16" fill="#0F172A" stroke="#475569" stroke-width="4"/>
+                                    
+                                    <!-- Decals / STEM Text -->
+                                    <text x="145" y="104" font-family="Orbitron" font-size="10" font-weight="900" fill="#FFFFFF" opacity="0.9">STEM v3.2</text>
+                                </svg>
+                            </div>
+
+                            <!-- Dynamic Footnote -->
+                            <div class="flex justify-between items-center text-xs text-gray-400 border-t border-brand-border/40 pt-4">
+                                <span>High-Density Zinc Shell</span>
+                                <span class="text-brand-neon font-mono">3.2 GEN 1 SPEED</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Customizer & Order Section -->
+        <section id="product" class="py-16 bg-brand-dark/60 border-y border-brand-border/40 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-3">BUILD YOUR RACING DRIVE</h2>
+                    <p class="text-gray-400">Select storage size, race body finish, and custom laser engraving.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+                    
+                    <!-- Left: Interactive Visualizer & Photo Gallery -->
+                    <div class="lg:col-span-6 space-y-4">
+                        <div class="bg-brand-card border border-brand-border rounded-2xl p-6 relative flex flex-col items-center justify-center min-h-[380px] overflow-hidden">
+                            <span class="absolute top-4 left-4 bg-gray-900/80 border border-gray-700 text-xs px-3 py-1 rounded-full text-gray-300">
+                                Interactive Preview
+                            </span>
+
+                            <!-- Big Selected Color Display -->
+                            <div id="preview-box" class="w-full flex items-center justify-center transition-all duration-300 transform">
+                                <svg viewBox="0 0 400 200" class="w-full max-w-md h-auto filter drop-shadow-[0_20px_20px_rgba(0,0,0,0.8)]">
+                                    <use href="#hero-car-svg"></use>
+                                </svg>
+                            </div>
+
+                            <!-- Feature Badges -->
+                            <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center text-[11px] text-gray-400 bg-gray-900/60 p-2.5 rounded-xl border border-gray-800">
+                                <span><i class="fa-solid fa-microchip text-brand-neon mr-1"></i> NAND Flash Chip</span>
+                                <span><i class="fa-solid fa-link text-brand-orange mr-1"></i> Carabiner Loop</span>
+                                <span><i class="fa-solid fa-bolt text-yellow-400 mr-1"></i> 3.2 Gen 1</span>
+                            </div>
+                        </div>
+
+                        <!-- Gallery Thumbnails -->
+                        <div class="grid grid-cols-3 gap-3">
+                            <button class="bg-brand-card border border-brand-border hover:border-brand-neon p-3 rounded-xl flex flex-col items-center text-xs text-gray-400 transition-all">
+                                <i class="fa-solid fa-car text-xl text-brand-neon mb-1"></i>
+                                Aerodynamic Body
+                            </button>
+                            <button class="bg-brand-card border border-brand-border hover:border-brand-neon p-3 rounded-xl flex flex-col items-center text-xs text-gray-400 transition-all">
+                                <i class="fa-solid fa-key text-xl text-brand-orange mb-1"></i>
+                                Keychain Lock
+                            </button>
+                            <button class="bg-brand-card border border-brand-border hover:border-brand-neon p-3 rounded-xl flex flex-col items-center text-xs text-gray-400 transition-all">
+                                <i class="fa-solid fa-microchip text-xl text-purple-400 mb-1"></i>
+                                High Speed Controller
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Configurator Form -->
+                    <div class="lg:col-span-6 bg-brand-card border border-brand-border p-6 sm:p-8 rounded-2xl space-y-6">
+                        
+                        <!-- Title & Rating -->
+                        <div>
+                            <div class="flex justify-between items-start">
+                                <h3 class="font-display text-2xl font-bold text-white">STEM Racing USB Keychain</h3>
+                                <div class="text-right">
+                                    <div id="total-price" class="text-3xl font-extrabold text-brand-neon font-display">$29.99</div>
+                                    <span class="text-xs text-emerald-400 font-medium">In Stock • Free Shipping</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2 mt-2">
+                                <div class="flex text-amber-400 text-xs">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star-half-stroke"></i>
+                                </div>
+                                <span class="text-xs font-semibold text-gray-300">4.9 / 5.0</span>
+                                <span class="text-xs text-gray-500">(142 STEM Team Reviews)</span>
+                            </div>
+                        </div>
+
+                        <hr class="border-brand-border">
+
+                        <!-- 1. Capacity Selection -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300">1. Select Capacity</label>
+                            <div class="grid grid-cols-3 gap-3">
+                                <button type="button" data-capacity="32GB" data-price="29.99" class="capacity-btn border-2 border-brand-orange bg-brand-orange/10 text-white p-3 rounded-xl text-center font-bold font-display transition-all">
+                                    32 GB
+                                    <span class="block text-[10px] font-normal text-gray-400 mt-0.5">Starter Pack</span>
+                                </button>
+                                <button type="button" data-capacity="64GB" data-price="39.99" class="capacity-btn border border-brand-border bg-brand-dark/50 hover:border-gray-500 text-gray-300 p-3 rounded-xl text-center font-bold font-display transition-all">
+                                    64 GB
+                                    <span class="block text-[10px] font-normal text-gray-400 mt-0.5">Most Popular</span>
+                                </button>
+                                <button type="button" data-capacity="128GB" data-price="59.99" class="capacity-btn border border-brand-border bg-brand-dark/50 hover:border-gray-500 text-gray-300 p-3 rounded-xl text-center font-bold font-display transition-all">
+                                    128 GB
+                                    <span class="block text-[10px] font-normal text-gray-400 mt-0.5">Pro Telemetry</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 2. Color Finish Selection -->
+                        <div class="space-y-3">
+                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-300">2. Select Body Finish</label>
+                            <div class="grid grid-cols-4 gap-3">
+                                <button type="button" data-color="orange" data-c1="#FF5500" data-c2="#CC2200" class="color-btn border-2 border-brand-neon p-2 rounded-xl flex flex-col items-center justify-center bg-brand-dark">
+                                    <span class="w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-red-600 mb-1"></span>
+                                    <span class="text-[11px] font-medium text-white">Apex Orange</span>
+                                </button>
+                                <button type="button" data-color="cyan" data-c1="#00F0FF" data-c2="#0088CC" class="color-btn border border-brand-border p-2 rounded-xl flex flex-col items-center justify-center bg-brand-dark hover:border-gray-500">
+                                    <span class="w-6 h-6 rounded-full bg-gradient-to-r from-cyan-400 to-blue-600 mb-1"></span>
+                                    <span class="text-[11px] font-medium text-gray-300">Aero Cyan</span>
+                                </button>
+                                <button type="button" data-color="stealth" data-c1="#334155" data-c2="#0F172A" class="color-btn border border-brand-border p-2 rounded-xl flex flex-col items-center justify-center bg-brand-dark hover:border-gray-500">
+                                    <span class="w-6 h-6 rounded-full bg-gradient-to-r from-slate-600 to-slate-900 mb-1"></span>
+                                    <span class="text-[11px] font-medium text-gray-300">Stealth Black</span>
+                                </button>
+                                <button type="button" data-color="gold" data-c1="#F59E0B" data-c2="#B45309" class="color-btn border border-brand-border p-2 rounded-xl flex flex-col items-center justify-center bg-brand-dark hover:border-gray-500">
+                                    <span class="w-6 h-6 rounded-full bg-gradient-to-r from-amber-400 to-yellow-600 mb-1"></span>
+                                    <span class="text-[11px] font-medium text-gray-300">Podium Gold</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- 3. Custom Engraving (Optional) -->
+                        <div class="space-y-2">
+                            <div class="flex justify-between items-center">
+                                <label class="text-xs font-bold uppercase tracking-wider text-gray-300">3. Custom Laser Engraving (+ $4.99)</label>
+                                <span class="text-[11px] text-gray-400">Max 12 chars</span>
+                            </div>
+                            <input type="text" id="engraving-input" maxlength="12" placeholder="e.g. TEAM-VELOCE" class="w-full bg-brand-dark border border-brand-border rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-brand-neon transition-colors uppercase font-mono tracking-widest">
+                        </div>
+
+                        <!-- Add to Cart & Buy Buttons -->
+                        <div class="pt-2 space-y-3">
+                            <button id="add-to-cart-btn" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-brand-orange to-red-600 hover:from-orange-600 hover:to-red-700 shadow-lg shadow-orange-950/40 flex items-center justify-center space-x-2 transition-all transform active:scale-95">
+                                <i class="fa-solid fa-cart-plus"></i>
+                                <span>ADD TO CART</span>
+                            </button>
+                            
+                            <div class="flex items-center justify-center space-x-4 text-xs text-gray-400 pt-1">
+                                <span><i class="fa-solid fa-truck-fast text-brand-neon mr-1"></i> Ships in 24h</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-rotate-left text-brand-orange mr-1"></i> 30-Day Guarantee</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-shield text-emerald-400 mr-1"></i> 2-Year Warranty</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering / Features Grid -->
+        <section id="features" class="py-20 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-4">ENGINEERED FOR EXTREMES</h2>
+                    <p class="text-gray-400">Combining formula-grade telemetry style with rugged daily keychain utility.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Feature 1 -->
+                    <div class="bg-brand-card border border-brand-border p-8 rounded-2xl relative overflow-hidden group hover:border-brand-orange/60 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-brand-orange/10 border border-brand-orange/30 flex items-center justify-center text-brand-orange text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-gauge-high"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">USB 3.2 Gen 1 Speed</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Transfer CAD files, 3D printing code, racing telemetry data, or HD video clips at speeds up to 400 MB/s. Backwards compatible with USB 2.0.
+                        </p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-brand-card border border-brand-border p-8 rounded-2xl relative overflow-hidden group hover:border-brand-neon/60 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-brand-neon/10 border border-brand-neon/30 flex items-center justify-center text-brand-neon text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-link"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Integrated Carabiner Loop</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Never lose your drive again. The rear wing structure acts as a high-strength key loop, effortlessly hooking onto keyrings, lanyards, or backpacks.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-brand-card border border-brand-border p-8 rounded-2xl relative overflow-hidden group hover:border-brand-purple/60 transition-all">
+                        <div class="w-12 h-12 rounded-xl bg-brand-purple/10 border border-brand-purple/30 flex items-center justify-center text-purple-400 text-xl mb-6 group-hover:scale-110 transition-transform">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-display text-xl font-bold text-white mb-2">Anodized Zinc Alloy Chassis</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed">
+                            Crafted from die-cast zinc alloy for superior crush resistance, heat dissipation, and waterproof endurance. Built to take a beating in your pocket.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- STEM Story Banner -->
+        <section id="stem" class="py-16 bg-gradient-to-r from-brand-card via-brand-dark to-brand-card border-y border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-4">
+                        <span class="text-brand-neon text-xs font-bold uppercase tracking-widest">Designed For Student & Pro Racers</span>
+                        <h2 class="font-display text-3xl sm:text-4xl font-black text-white leading-snug">SUPPORTING THE NEXT GENERATION OF STEM ENGINEERS</h2>
+                        <p class="text-gray-400 text-sm sm:text-base leading-relaxed">
+                            Veloce Dynamics was created by STEM racing enthusiasts. Every USB key design pays homage to aerodynamic car design, inspired by F1 in Schools, Formula Student, and robotics competitions.
+                        </p>
+                        <div class="pt-2 flex items-center space-x-6">
+                            <div>
+                                <span class="font-display text-2xl font-bold text-brand-orange">10%</span>
+                                <span class="block text-xs text-gray-400">Proceeds to STEM Clubs</span>
+                            </div>
+                            <div class="h-8 w-px bg-brand-border"></div>
+                            <div>
+                                <span class="font-display text-2xl font-bold text-brand-neon">50,000+</span>
+                                <span class="block text-xs text-gray-400">Files Transferred</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-brand-dark p-6 rounded-2xl border border-brand-border space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i class="fa-solid fa-graduation-cap text-brand-orange text-2xl"></i>
+                            <h4 class="font-display text-lg font-bold text-white">Educational & Team Discounts</h4>
+                        </div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Ordering for a school STEM racing team or club? We offer custom logo laser engraving and bulk pricing for orders of 10+ keychains.
+                        </p>
+                        <a href="mailto:stem@velocedynamics.com" class="inline-flex items-center text-xs font-bold text-brand-neon hover:underline">
+                            Contact STEM Sales <i class="fa-solid fa-arrow-right ml-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Specifications Table -->
+        <section id="specs" class="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl font-bold text-white mb-2">TECHNICAL SPECIFICATIONS</h2>
+                <p class="text-gray-400 text-sm">Detailed hardware breakdown for the Veloce STEM Racing Series.</p>
+            </div>
+
+            <div class="bg-brand-card border border-brand-border rounded-2xl overflow-hidden">
+                <table class="w-full text-left text-sm text-gray-300">
+                    <tbody class="divide-y divide-brand-border">
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white w-1/3">Interface</td>
+                            <td class="py-4 px-6 font-mono text-gray-400">USB 3.2 Gen 1 (Type-A)</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">Read Transfer Speed</td>
+                            <td class="py-4 px-6 font-mono text-brand-neon">Up to 400 MB/s</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">Write Transfer Speed</td>
+                            <td class="py-4 px-6 font-mono text-gray-400">Up to 150 MB/s</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">Chassis Material</td>
+                            <td class="py-4 px-6 text-gray-400">High-density Zinc Alloy (Anodized)</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">Dimensions & Weight</td>
+                            <td class="py-4 px-6 text-gray-400">62mm x 24mm x 12mm | 38 grams</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">OS Compatibility</td>
+                            <td class="py-4 px-6 text-gray-400">Windows 11/10, macOS, Linux, ChromeOS</td>
+                        </tr>
+                        <tr class="hover:bg-brand-dark/40 transition-colors">
+                            <td class="py-4 px-6 font-semibold text-white">Keychain Lock</td>
+                            <td class="py-4 px-6 text-gray-400">Integrated Stainless Steel Split-Ring</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Customer Reviews -->
+        <section id="reviews" class="py-16 bg-brand-dark/60 border-t border-brand-border">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-12">
+                    <h2 class="font-display text-3xl font-bold text-white mb-2">RACER REVIEWS</h2>
+                    <p class="text-gray-400 text-sm">Trusted by students, engineers, and motorsport fans.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"Insanely fast transfers for our CAD files during racing competitions. Plus it looks awesome on my car keys!"</p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center font-bold text-xs">AL</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Alex L.</h4>
+                                <span class="text-[10px] text-gray-500">STEM Racing Team Lead</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"The build quality is incredible. Drop it, throw keys on it, it doesn't scratch. The custom laser engraving was spot on."</p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-brand-neon/20 text-brand-neon flex items-center justify-center font-bold text-xs">MK</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Marcus K.</h4>
+                                <span class="text-[10px] text-gray-500">Verified Buyer</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-card border border-brand-border p-6 rounded-2xl space-y-4">
+                        <div class="flex text-amber-400 text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-sm italic">"Bought 15 of these for our whole high school engineering squad. Best practical gift for any tech or car enthusiast."</p>
+                        <div class="flex items-center space-x-3">
+                            <div class="w-9 h-9 rounded-full bg-purple-500/20 text-purple-400 flex items-center justify-center font-bold text-xs">SR</div>
+                            <div>
+                                <h4 class="text-xs font-bold text-white">Sarah R.</h4>
+                                <span class="text-[10px] text-gray-500">STEM Mentor</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Shopping Cart Drawer -->
+    <div id="cart-drawer" class="fixed inset-0 z-50 pointer-events-none opacity-0 transition-opacity duration-300">
+        <!-- Backdrop -->
+        <div id="cart-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+        
+        <!-- Cart Panel -->
+        <div class="absolute right-0 top-0 bottom-0 w-full max-w-md bg-brand-card border-l border-brand-border shadow-2xl flex flex-col pointer-events-auto transform translate-x-full transition-transform duration-300 id-cart-panel">
+            <div class="p-6 border-b border-brand-border flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-bag-shopping text-brand-neon"></i>
+                    <h3 class="font-display font-bold text-white text-lg">Your Racing Cart</h3>
+                </div>
+                <button id="close-cart-btn" class="text-gray-400 hover:text-white p-2">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items List -->
+            <div id="cart-items-container" class="flex-grow p-6 overflow-y-auto space-y-4">
+                <div id="empty-cart-msg" class="text-center py-12 text-gray-500">
+                    <i class="fa-solid fa-cart-flatbed text-4xl mb-3"></i>
+                    <p class="text-sm">Your cart is empty.</p>
+                </div>
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="p-6 border-t border-brand-border bg-brand-dark/50 space-y-4">
+                <div class="flex justify-between text-sm text-gray-400">
+                    <span>Subtotal</span>
+                    <span id="cart-subtotal" class="font-mono text-white">$0.00</span>
+                </div>
+                <div class="flex justify-between text-sm text-gray-400">
+                    <span>Shipping (Worldwide)</span>
+                    <span class="text-emerald-400 font-medium">FREE</span>
+                </div>
+                <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-brand-border">
+                    <span>Total</span>
+                    <span id="cart-total" class="font-display text-brand-neon">$0.00</span>
+                </div>
+
+                <button id="checkout-btn" class="w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-brand-orange to-red-600 hover:from-orange-600 hover:to-red-700 shadow-lg shadow-orange-950/40 flex items-center justify-center space-x-2 transition-all">
+                    <span>PROCEED TO CHECKOUT</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkout-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm hidden">
+        <div class="bg-brand-card border border-brand-border rounded-2xl w-full max-w-lg p-6 sm:p-8 relative space-y-6">
+            <button id="close-modal-btn" class="absolute top-4 right-4 text-gray-400 hover:text-white">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            
+            <div class="text-center">
+                <div class="w-12 h-12 bg-emerald-500/20 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-3 text-xl">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h3 class="font-display text-2xl font-bold text-white">Simulated Checkout</h3>
+                <p class="text-xs text-gray-400 mt-1">This is a GitHub demo checkout interface.</p>
+            </div>
+
+            <form id="checkout-form" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Full Name</label>
+                    <input type="text" required placeholder="Alex Hamilton" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-neon">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Shipping Address</label>
+                    <input type="text" required placeholder="123 Racing Grid Way, Sector 4" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-neon">
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Card Number</label>
+                        <input type="text" required placeholder="•••• •••• •••• 4242" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-neon">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Expiry / CVC</label>
+                        <input type="text" required placeholder="12/28 • 123" class="w-full bg-brand-dark border border-brand-border rounded-lg px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-brand-neon">
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 shadow-lg flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-check"></i>
+                        <span>Complete Demo Order</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark border-t border-brand-border py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-brand-orange flex items-center justify-center text-white font-bold text-sm">V</div>
+                    <span class="font-display text-lg font-bold text-white tracking-wider">VELOCE DYNAMICS</span>
+                </div>
+                <p class="text-xs text-gray-500 text-center md:text-left">
+                    &copy; 2026 Veloce Dynamics STEM Racing Gear. Designed for high speed performance. Ready for GitHub Pages deployment.
+                </p>
+                <div class="flex space-x-4 text-gray-400 text-lg">
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i class="fa-brands fa-github"></i></a>
+                    <a href="#" class="hover:text-brand-neon transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-brand-orange transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        // State
+        let selectedCapacity = '32GB';
+        let basePrice = 29.99;
+        let selectedColor = 'orange';
+        let cart = [];
+
+        // Capacity Buttons Selection
+        const capacityBtns = document.querySelectorAll('.capacity-btn');
+        capacityBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                capacityBtns.forEach(b => {
+                    b.classList.remove('border-2', 'border-brand-orange', 'bg-brand-orange/10', 'text-white');
+                    b.classList.add('border', 'border-brand-border', 'bg-brand-dark/50', 'text-gray-300');
+                });
+                btn.classList.remove('border', 'border-brand-border', 'bg-brand-dark/50', 'text-gray-300');
+                btn.classList.add('border-2', 'border-brand-orange', 'bg-brand-orange/10', 'text-white');
+
+                selectedCapacity = btn.dataset.capacity;
+                basePrice = parseFloat(btn.dataset.price);
+                updateTotalPrice();
+            });
+        });
+
+        // Color Buttons Selection
+        const colorBtns = document.querySelectorAll('.color-btn');
+        const grad1 = document.getElementById('svg-grad-1');
+        const grad2 = document.getElementById('svg-grad-2');
+
+        colorBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                colorBtns.forEach(b => {
+                    b.classList.remove('border-2', 'border-brand-neon');
+                    b.classList.add('border', 'border-brand-border');
+                });
+                btn.classList.remove('border', 'border-brand-border');
+                btn.classList.add('border-2', 'border-brand-neon');
+
+                selectedColor = btn.dataset.color;
+                const c1 = btn.dataset.c1;
+                const c2 = btn.dataset.c2;
+                
+                // Dynamically update SVG Car gradient colors
+                if(grad1 && grad2) {
+                    grad1.setAttribute('stop-color', c1);
+                    grad2.setAttribute('stop-color', c2);
+                }
+            });
+        });
+
+        // Engraving Input listener
+        const engravingInput = document.getElementById('engraving-input');
+        engravingInput.addEventListener('input', () => {
+            updateTotalPrice();
+        });
+
+        function updateTotalPrice() {
+            let total = basePrice;
+            if (engravingInput.value.trim().length > 0) {
+                total += 4.99;
+            }
+            document.getElementById('total-price').textContent = `$${total.toFixed(2)}`;
+        }
+
+        // Cart Drawer Logic
+        const cartDrawer = document.getElementById('cart-drawer');
+        const cartPanel = cartDrawer.querySelector('.id-cart-panel');
+        const openCartBtn = document.getElementById('open-cart-btn');
+        const closeCartBtn = document.getElementById('close-cart-btn');
+        const cartBackdrop = document.getElementById('cart-backdrop');
+        const addToCartBtn = document.getElementById('add-to-cart-btn');
+
+        function openCart() {
+            cartDrawer.classList.remove('pointer-events-none', 'opacity-0');
+            cartPanel.classList.remove('translate-x-full');
+        }
+
+        function closeCart() {
+            cartDrawer.classList.add('pointer-events-none', 'opacity-0');
+            cartPanel.classList.add('translate-x-full');
+        }
+
+        openCartBtn.addEventListener('click', openCart);
+        closeCartBtn.addEventListener('click', closeCart);
+        cartBackdrop.addEventListener('click', closeCart);
+
+        // Add to Cart Action
+        addToCartBtn.addEventListener('click', () => {
+            const engraving = engravingInput.value.trim();
+            const itemPrice = basePrice + (engraving ? 4.99 : 0);
+            
+            const item = {
+                id: Date.now(),
+                title: `STEM Racing USB Keychain (${selectedCapacity})`,
+                color: selectedColor,
+                engraving: engraving || 'None',
+                price: itemPrice
+            };
+
+            cart.push(item);
+            renderCart();
+            openCart();
+        });
+
+        function renderCart() {
+            const container = document.getElementById('cart-items-container');
+            const cartBadge = document.getElementById('cart-badge');
+            
+            if (cart.length === 0) {
+                container.innerHTML = `
+                    <div class="text-center py-12 text-gray-500">
+                        <i class="fa-solid fa-cart-flatbed text-4xl mb-3"></i>
+                        <p class="text-sm">Your cart is empty.</p>
+                    </div>
+                `;
+                cartBadge.classList.add('opacity-0');
+                document.getElementById('cart-subtotal').textContent = '$0.00';
+                document.getElementById('cart-total').textContent = '$0.00';
+                return;
+            }
+
+            cartBadge.textContent = cart.length;
+            cartBadge.classList.remove('opacity-0');
+
+            let subtotal = 0;
+            container.innerHTML = cart.map((item, index) => {
+                subtotal += item.price;
+                return `
+                    <div class="bg-brand-dark p-4 rounded-xl border border-brand-border flex items-center justify-between">
+                        <div class="space-y-1">
+                            <h4 class="text-xs font-bold text-white">${item.title}</h4>
+                            <p class="text-[11px] text-gray-400">Finish: <span class="capitalize text-brand-neon">${item.color}</span></p>
+                            ${item.engraving !== 'None' ? `<p class="text-[10px] text-brand-orange font-mono">Engraving: ${item.engraving}</p>` : ''}
+                            <span class="text-xs font-bold text-white font-mono">$${item.price.toFixed(2)}</span>
+                        </div>
+                        <button onclick="removeItem(${index})" class="text-gray-500 hover:text-red-400 p-2">
+                            <i class="fa-solid fa-trash-can text-sm"></i>
+                        </button>
+                    </div>
+                `;
+            }).join('');
+
+            document.getElementById('cart-subtotal').textContent = `$${subtotal.toFixed(2)}`;
+            document.getElementById('cart-total').textContent = `$${subtotal.toFixed(2)}`;
+        }
+
+        window.removeItem = function(index) {
+            cart.splice(index, 1);
+            renderCart();
+        }
+
+        // Checkout Modal Logic
+        const checkoutBtn = document.getElementById('checkout-btn');
+        const checkoutModal = document.getElementById('checkout-modal');
+        const closeModalBtn = document.getElementById('close-modal-btn');
+        const checkoutForm = document.getElementById('checkout-form');
+     checkoutBtn.addEventListener('click', () => {
+            if(cart.length === 0) return;
+            closeCart();
+            checkoutModal.classList.remove('hidden');
+        });
+
+        closeModalBtn.addEventListener('click', () => {
+            checkoutModal.classList.add('hidden');
+        });
+
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Order simulated successfully! Thank you for supporting Veloce Dynamics STEM Racing.');
+            cart = [];
+            renderCart();
+            checkoutModal.classList.add('hidden');
+        });
+    </script>
+</body>
+</html>
